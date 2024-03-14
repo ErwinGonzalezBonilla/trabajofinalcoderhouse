@@ -1,5 +1,5 @@
 """
-URL configuration for django1 project.
+URL configuration for trumpet_store project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -14,15 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django import views
 from django.contrib import admin
-from django.urls import path, include
-from inicio import views
-
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/', include('inicio.urls')),
-    # path('alumno/nuevo/<str:nombre>/<str:apellido>/<int:edad>/', views.crear_alumno, name='crear_alumno'),
-    path('alumno/nuevo/<str:nombre>/<str:apellido>/<int:edad>/', views.crear_alumno, name='crear_alumno'),
 ]
