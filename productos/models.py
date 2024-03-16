@@ -13,5 +13,5 @@ class Product(models.Model):
     tipo= models.CharField(max_length=50, choices=PRODUCT_TYPES )
     categoria= models.CharField(max_length=150)
     precio= models.FloatField(max_length=150)
-   # imagen= models.ImageField(upload_to="uploads/%Y/%m")
+    imagen= models.ImageField(upload_to="uploads/%Y/%m")
     
