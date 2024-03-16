@@ -17,11 +17,16 @@
 
 # Create your models here.
 
-#class Alumno(models.Model):
-   # nombre = models.CharField(max_length=20)
-  #  apellido = models.CharField(max_length=30)
- #   edad =models.IntegerField()
-#    nota =models.IntegerField()
+#from pyexpat import model
+
+#from django.forms import ModelChoiceField, ModelChoiceIterator, model_to_dict, modelform_factory
+
+
+#class Alumno(model.Model):
+   # nombre = model_to_dict.CharField(max_length=20)
+   # apellido = ModelChoiceField.CharField(max_length=30)
+  #  edad =ModelChoiceIterator.IntegerField()
+ #   nota =modelform_factory.IntegerField()
     
 #    def __str__(self):
 #      return f"{self.nombre} {self.apellido} - {self.nota}"

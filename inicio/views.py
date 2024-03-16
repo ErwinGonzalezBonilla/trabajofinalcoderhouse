@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 def inicio(request):
     return HttpResponse('<h1>Bienvenidos a tu Tienda de Trompetas ()>-iii-*</h1>') 
-
+    
 def mostrar_horario(request):
     fecha= datetime.now()
     return HttpResponse(f'Esta es la Fecha y Hora actual: {fecha}')
@@ -13,7 +13,7 @@ def mostrar_horario(request):
 def saludo(request, nombre, apellido):
     nombre_formateado= nombre.title()
     apellido_formateado= apellido.title()
-    return HttpResponse(f'Bienvenido {nombre}{apellido}')
+    return HttpResponse(f'Bienvenido/a  {nombre} {apellido}')
 
 
 #
