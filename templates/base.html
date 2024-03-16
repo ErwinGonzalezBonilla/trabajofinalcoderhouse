@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tienda de Musica{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+            Header por defecto
+        {% endblock %}
+    </header>
+    {% block content %}Contenido por defecto{% endblock %}
+    <footer>
+        {% block footer %}
+            Footer por defecto
+        {% endblock %}
+    </footer>
+</body>
+</html>
