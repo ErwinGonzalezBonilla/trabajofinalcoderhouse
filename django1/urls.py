@@ -17,7 +17,8 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 
@@ -28,6 +29,10 @@ urlpatterns = [
     path('inicio/', include('inicio.urls')),
     path('productos/', include('productos.urls'))
     ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
     #path('', inicio, name='inicio'),
     
     #path('inicio/', include('inicio.urls')),

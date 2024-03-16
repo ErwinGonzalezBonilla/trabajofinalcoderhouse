@@ -9,6 +9,7 @@
         <div>{{ producto.nombre}}</div>
         <div>{{ producto.marca}}</div>
         <div>{{ producto.modelo}}</div>
+        <div><img src="{{ producto.imagen.url }}" alt="{{ producto.nombre}}"></div>
         <div>
             <a href="{% url 'productos:detalle_producto' producto.pk %}">
                 Ver detalle
