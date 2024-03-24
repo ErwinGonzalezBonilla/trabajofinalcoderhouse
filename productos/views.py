@@ -4,7 +4,10 @@ from .models import Product
 def listado(request):
     queryDictionary = request.GET
     tipo = queryDictionary.get('tipo', '')
-    productos = Product.objects.filter(tipo__exact=tipo)
+    if tipo == '':
+        productos = Product.objects.all()
+    else:
+        productos = Product.objects.filter(tipo__exact=tipo)
     context= {'productos': productos}
     return render(request, "product_list.html", context)
 
