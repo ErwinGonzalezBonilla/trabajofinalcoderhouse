@@ -1,4 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<div>{{ producto.nombre }}</div>
+<div class="ratio ratio-16x9" >
+    <img class="rounded" src="{{ producto.imagen.url }}" alt="{{ producto.nombre}}">
+</div>
+<h1>{{ producto.nombre }}</h1>
+<div class="precio">{{ producto.precio }} $</div>
+<section>
+    <p>
+        {{ producto.descripcion }}
+    </p>
+</section>
+
 {% endblock %}
