@@ -1,24 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% if productos %}
+        <ul class="row gy-4 productos"> 
+            {% for producto in productos %}
+            <li class="col-12 col-sm-6 col-lg-4">
+                <div class="card">
+                    <div class="ratio ratio-16x9" >
+                        <img class="rounded" src="{{ producto.imagen.url }}" alt="{{ producto.nombre}}">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ producto.nombre}}</h5>
+                        <div class="card-text">
+                            <div>{{ producto.marca}}</div>
+                            <div>{{ producto.modelo}}</div>
+                        </div>
+                        
+                        <a class="btn btn-primary" href="{% url 'productos:detalle_producto' producto.pk %}">
+                            Ver detalle
+                        </a>
+                            {% comment %} Test {{producto.pk}} {% endcomment %}
+                    </div>
+                    
+                </div>
+                
+            </li>
+            
+            {% endfor %}
+        </ul>
 
-{% if productos %}
-<ul> 
-    {%for producto in productos%}
-    <li>
-        <div>{{ producto.nombre}}</div>
-        <div>{{ producto.marca}}</div>
-        <div>{{ producto.modelo}}</div>
-        <div><img src="{{ producto.imagen.url }}" alt="{{ producto.nombre}}"></div>
-        <div>
-            <a href="{% url 'productos:detalle_producto' producto.pk %}">
-                <button>Ver detalle</button>
-            </a>
-            {% comment %} Test {{producto.pk}} {% endcomment %}
-        </div>
-    </li>
-    
-    {% endfor %}
-</ul>
-{% else %} No hay productos {% endif%}
+    {% else %} No hay productos {% endif%}
 {% endblock %}
