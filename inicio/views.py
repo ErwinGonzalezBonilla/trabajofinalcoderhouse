@@ -5,6 +5,9 @@ from django.http import HttpResponse
 
 def inicio(request):
     return HttpResponse('<h1>Bienvenidos a tu Tienda de Trompetas ()>-iii-*</h1>') 
+
+def about(request):
+    return render(request, 'about.html') 
     
 def mostrar_horario(request):
     fecha= datetime.now()

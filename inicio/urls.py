@@ -1,11 +1,11 @@
 from django.urls import path
-from inicio.views import inicio, mostrar_horario, saludo
+from inicio.views import inicio, mostrar_horario, saludo, about
 
 
-#from . import views
+app_name= 'inicio'
 
 urlpatterns = [
-   path('', inicio, name='inicio'),
+   path('', about, name='about'),
    path('mostrar-horario/',mostrar_horario, name='mostrar_horario' ),
    path('saludo/<str:nombre>/<str:apellido>/', saludo, name='saludo')
    
