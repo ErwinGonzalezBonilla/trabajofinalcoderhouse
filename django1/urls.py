@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from productos import views as productViews
 
 
 
@@ -27,7 +28,8 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('inicio/', include('inicio.urls')),
-    path('productos/', include('productos.urls'))
+    path('productos/', include('productos.urls')),
+    path('', productViews.listado)
     ]
 
 if settings.DEBUG:
