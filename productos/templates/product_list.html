@@ -12,7 +12,7 @@
         <div><img src="{{ producto.imagen.url }}" alt="{{ producto.nombre}}"></div>
         <div>
             <a href="{% url 'productos:detalle_producto' producto.pk %}">
-                Ver detalle
+                <button>Ver detalle</button>
             </a>
             {% comment %} Test {{producto.pk}} {% endcomment %}
         </div>
