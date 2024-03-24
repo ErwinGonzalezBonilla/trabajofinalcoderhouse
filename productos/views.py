@@ -2,7 +2,9 @@ from django.shortcuts import render
 from .models import Product
 # Create your views here.
 def listado(request):
-    productos = Product.objects.all()
+    queryDictionary = request.GET
+    tipo = queryDictionary.get('tipo', '')
+    productos = Product.objects.filter(tipo__exact=tipo)
     context= {'productos': productos}
     return render(request, "product_list.html", context)
 
