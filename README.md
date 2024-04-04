@@ -7,6 +7,16 @@ python -m venv
 °Carpeta distibuible y crear la base de datos en db.sqlite3
 python setup.py sdist
 
+°instalación de Git
+Utilización de comandos a lo largo del proyecto:
+-git  config
+-git init
+-git add
+-git commit -m
+-git status
+-git push
+entre otros.
+
 °Creo mi proyecto en Github trabajofinalcoderhouse
 git clone https://github.com/ErwinGonzalezBonilla/trabajofinalcoderhouse
 
