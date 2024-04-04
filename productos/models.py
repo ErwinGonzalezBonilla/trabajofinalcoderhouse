@@ -15,3 +15,6 @@ class Product(models.Model):
     precio= models.FloatField(max_length=150)
     imagen= models.ImageField(upload_to="uploads/%Y/%m")
     
+
+    
+    

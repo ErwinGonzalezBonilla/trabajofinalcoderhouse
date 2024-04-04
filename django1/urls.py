@@ -29,7 +29,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', include('inicio.urls')),
     path('productos/', include('productos.urls')),
-    path('', productViews.listado)
+    path('', productViews.listado),
+    path('usuario/', include('usuario.urls')),
     ]
 
 if settings.DEBUG:

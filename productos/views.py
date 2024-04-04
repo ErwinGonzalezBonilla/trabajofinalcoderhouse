@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+
 # Create your views here.
 def listado(request):
     queryDictionary = request.GET
