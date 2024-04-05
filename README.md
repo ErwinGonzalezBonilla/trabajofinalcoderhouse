@@ -71,7 +71,8 @@ AuthenticationForm es utilizado en urls.py de 'usuario'.
 A mi pagina web Tienda de Trompetas le falta confeccion y detalles,igual me falta mucho por aprender,
 este curso es mi iniciación al mundo de la programación, pero creo que es un buen proyecto para su evaluación, espero cumpla con sus espectativas y aprobación. 
 
-Anexo video de muestra: 
+Anexo video de muestra: https://www.youtube.com/watch?v=GhNK5x8erAI&ab_channel=ErwinGonz%C3%A1lez
+
 
 
 
